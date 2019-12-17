@@ -16,7 +16,8 @@ const PORT = process.env.PORT || 3000;
 // parse application
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/assets'));
+// app.use(express.static(__dirname + '/assets'));
+//this is used for any css files and images in an assets folder
 
 // CUSTOM MODULES
 require('./app/routing/apiRoutes.js')(app);
