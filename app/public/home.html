@@ -11,23 +11,32 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4" style="text-align: center;">Friend Finder</h1>
-                <p class="lead" style="text-align: center;">Take this survey and find a friend that thinks just like
-                    you!
-                </p>
+    <div class="container" style="display: flex; flex-direction: column;">
+        <div class="row">
+
+            <div class="jumbotron jumbotron-fluid" style="height: 100%; flex: 1">
+                <div class="container">
+                    <h1 class="display-4" style="text-align: center;">Friend Finder</h1>
+                    <p class="lead" style="text-align: center;">Take this survey and find a friend that thinks just like
+                        you!
+                    </p>
+                </div>
             </div>
+        </div>
+        <div class="row">
+            <a href="survey.html" class="btn btn-primary btn-lg active" style="justify-content: center;" role="button"
+                aria-pressed="true">Take the
+                Survey</a>
+
         </div>
     </div>
 
     <footer>
 
-        <a href="/api/Friends">API Friends </a>
+        <a href="/api/Friends" target="_blank">API Friends </a>
 
 
-        <a class="nav-link" href="/api/waitlist">Github Repo</a>
+        <a class="nav-link" href="https://github.com/niviamanjee/FriendFinder" target="_blank">Github Repo</a>
 
     </footer>
 
