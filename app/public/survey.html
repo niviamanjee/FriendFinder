@@ -37,7 +37,9 @@
         <div class="row" id="questions">
             <div id="question-1">
                 <h2>Question 1</h2>
-                <select class="form-control">
+                <h4> You tend to find more comfort in planning rather than spontaneity.</h4>
+                <select class="form-control answer">
+                    <option></option>
                     <option>1 (strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -47,9 +49,11 @@
             </div>
         </div>
         <div class="row" id="questions">
-            <div id="question-1">
+            <div id="question-2">
                 <h2>Question 2</h2>
-                <select class="form-control">
+                <h4> You think a lot about the past rather than the future.</h4>
+                <select class="form-control answer">
+                    <option></option>
                     <option>1 (strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -59,9 +63,11 @@
             </div>
         </div>
         <div class="row" id="questions">
-            <div id="question-1">
+            <div id="question-3">
                 <h2>Question 3</h2>
-                <select class="form-control">
+                <h4> You believe there is something as fate or luck that has a role in the events of your life.</h4>
+                <select class="form-control answer">
+                    <option></option>
                     <option>1 (strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -71,9 +77,12 @@
             </div>
         </div>
         <div class="row" id="questions">
-            <div id="question-1">
+            <div id="question-4">
                 <h2>Question 4</h2>
-                <select class="form-control">
+                <h4> If there is something bothering you, you tend to confront the problem or person you believe to be
+                    responsible.</h4>
+                <select class="form-control answer">
+                    <option></option>
                     <option>1 (strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -83,9 +92,11 @@
             </div>
         </div>
         <div class="row" id="questions">
-            <div id="question-1">
+            <div id="question-5">
                 <h2>Question 5</h2>
-                <select class="form-control">
+                <h4> You believe in soulmates.</h4>
+                <select class="form-control answer">
+                    <option></option>
                     <option>1 (strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -95,9 +106,11 @@
             </div>
         </div>
         <div class="row" id="questions">
-            <div id="question-1">
+            <div id="question-6">
                 <h2>Question 6</h2>
-                <select class="form-control">
+                <h4> When among people you tend to listen and observe rather than speak to others.</h4>
+                <select class="form-control answer">
+                    <option></option>
                     <option>1 (strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -107,9 +120,11 @@
             </div>
         </div>
         <div class="row" id="questions">
-            <div id="question-1">
+            <div id="question-7">
                 <h2>Question 7</h2>
-                <select class="form-control">
+                <h4> You believe money and wealth is the main indicator of success.</h4>
+                <select class="form-control answer">
+                    <option></option>
                     <option>1 (strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -119,9 +134,11 @@
             </div>
         </div>
         <div class="row" id="questions">
-            <div id="question-1">
+            <div id="question-8">
                 <h2>Question 8</h2>
-                <select class="form-control">
+                <h4> You consider yourself to be more "street smart" rather than "book smart".</h4>
+                <select class="form-control answer">
+                    <option></option>
                     <option>1 (strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -131,9 +148,11 @@
             </div>
         </div>
         <div class="row" id="questions">
-            <div id="question-1">
+            <div id="question-9">
                 <h2>Question 9</h2>
-                <select class="form-control">
+                <h4> You are a competitive person.</h4>
+                <select class="form-control answer">
+                    <option></option>
                     <option>1 (strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -143,9 +162,11 @@
             </div>
         </div>
         <div class="row" id="questions">
-            <div id="question-1">
+            <div id="question-10">
                 <h2>Question 10</h2>
-                <select class="form-control">
+                <h4> You believe a person has complete control over their personality.</h4>
+                <select class="form-control answer">
+                    <option></option>
                     <option>1 (strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -154,7 +175,7 @@
                 </select>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
     </div>
 
     <footer>
@@ -175,6 +196,38 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        //on-click function that saves values of survey responses in an object of userData 
+
+        $("#submitButton").on("click", function (event) {
+            event.preventDefault();
+
+            var newUser = {
+                userName: $("#userName").val().trim(),
+                imageLink: $("#imageLink").val().trim(),
+                answers: []
+            }
+
+            $(".answer").each(function (data) {
+
+                //pushes the users choices into the array
+                newUser.answers.push($(this).val().trim());
+            });
+
+            console.log(newUser.answers);
+
+            $.post("/api/friends", newUser).then(console.log(newUser))
+
+        })
+
+
+
+
+
+    </script>
 </body>
 
 </html>

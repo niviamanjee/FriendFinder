@@ -1,0 +1,10 @@
+Things done so far: 
+* routes made
+* able to save user data into an object and append to friendsArray
+
+
+Things to do:
+* compare user answers with answers of other users in the friendsArray 
+* find a user with the least differences in answers 
+* display user information of user match using a modal 
+* create a clear route that clears all the data from the friendsArray 

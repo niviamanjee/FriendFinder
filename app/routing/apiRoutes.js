@@ -10,6 +10,8 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", function (req, res) {
-
+        //this is how you retrieve your posted data 
+        console.log(req.body)
+        friendsData.push(req.body)
     })
 }
