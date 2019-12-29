@@ -13,5 +13,12 @@ module.exports = function (app) {
         //this is how you retrieve your posted data 
         console.log(req.body)
         friendsData.push(req.body)
-    })
+    });
+
+    app.post('/api/clear', function () {
+        friendsData.length = 0;
+
+
+        res.json({ ok: true });
+    });
 }

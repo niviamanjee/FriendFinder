@@ -202,6 +202,9 @@
 
         //on-click function that saves values of survey responses in an object of userData 
 
+        var usersArray = [];
+        //this array will store users outside of the server
+        //see if users exist in usersArray before pushing to friendsArray 
         $("#submitButton").on("click", function (event) {
             event.preventDefault();
 
@@ -217,9 +220,15 @@
                 newUser.answers.push($(this).val().trim());
             });
 
-            console.log(newUser.answers);
+            usersArray.push(newUser);
 
-            $.post("/api/friends", newUser).then(console.log(newUser))
+            console.log(`UsersArray: ${usersArray}`)
+
+
+            $.post("/api/friends", newUser)
+            $.get("/api/friends", function (req, res) {
+                console.log(`API get: ${req.body}`)
+            })
 
         })
 
