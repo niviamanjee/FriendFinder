@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="row">
             <h1>Survey Questions</h1>
@@ -40,11 +41,11 @@
                 <h4> You tend to find more comfort in planning rather than spontaneity.</h4>
                 <select class="form-control answer">
                     <option></option>
-                    <option>1 (strongly disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (strongly agree)</option>
+                    <option>5 </option>
                 </select>
             </div>
         </div>
@@ -54,11 +55,11 @@
                 <h4> You think a lot about the past rather than the future.</h4>
                 <select class="form-control answer">
                     <option></option>
-                    <option>1 (strongly disagree)</option>
+                    <option>1 </option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (strongly agree)</option>
+                    <option>5</option>
                 </select>
             </div>
         </div>
@@ -68,11 +69,11 @@
                 <h4> You believe there is something as fate or luck that has a role in the events of your life.</h4>
                 <select class="form-control answer">
                     <option></option>
-                    <option>1 (strongly disagree)</option>
+                    <option>1 </option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (strongly agree)</option>
+                    <option>5 </option>
                 </select>
             </div>
         </div>
@@ -83,11 +84,11 @@
                     responsible.</h4>
                 <select class="form-control answer">
                     <option></option>
-                    <option>1 (strongly disagree)</option>
+                    <option>1 </option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (strongly agree)</option>
+                    <option>5</option>
                 </select>
             </div>
         </div>
@@ -97,11 +98,11 @@
                 <h4> You believe in soulmates.</h4>
                 <select class="form-control answer">
                     <option></option>
-                    <option>1 (strongly disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (strongly agree)</option>
+                    <option>5</option>
                 </select>
             </div>
         </div>
@@ -111,11 +112,11 @@
                 <h4> When among people you tend to listen and observe rather than speak to others.</h4>
                 <select class="form-control answer">
                     <option></option>
-                    <option>1 (strongly disagree)</option>
+                    <option>1 </option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (strongly agree)</option>
+                    <option>5 </option>
                 </select>
             </div>
         </div>
@@ -125,11 +126,11 @@
                 <h4> You believe money and wealth is the main indicator of success.</h4>
                 <select class="form-control answer">
                     <option></option>
-                    <option>1 (strongly disagree)</option>
+                    <option>1 </option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (strongly agree)</option>
+                    <option>5 </option>
                 </select>
             </div>
         </div>
@@ -139,11 +140,11 @@
                 <h4> You consider yourself to be more "street smart" rather than "book smart".</h4>
                 <select class="form-control answer">
                     <option></option>
-                    <option>1 (strongly disagree)</option>
+                    <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (strongly agree)</option>
+                    <option>5 </option>
                 </select>
             </div>
         </div>
@@ -153,11 +154,11 @@
                 <h4> You are a competitive person.</h4>
                 <select class="form-control answer">
                     <option></option>
-                    <option>1 (strongly disagree)</option>
+                    <option>1 </option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (strongly agree)</option>
+                    <option>5 </option>
                 </select>
             </div>
         </div>
@@ -167,18 +168,39 @@
                 <h4> You believe a person has complete control over their personality.</h4>
                 <select class="form-control answer">
                     <option></option>
-                    <option>1 (strongly disagree)</option>
+                    <option>1 </option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5 (strongly agree)</option>
+                    <option>5 </option>
                 </select>
             </div>
         </div>
-        <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+        <button id="submitButton" type="button" class="btn btn-info btn-lg" data-toggle="modal"
+            data-target="#matchModal">Submit</button>
+        <!-- Modal -->
+        <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"> Your Match! </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <footer>
+    <footer style="display:flex; flex-direction: row;">
 
         <a href="/api/Friends" target="_blank">API Friends </a>
 
@@ -190,45 +212,56 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script type="text/javascript">
 
         //on-click function that saves values of survey responses in an object of userData 
 
-        var usersArray = [];
-        //this array will store users outside of the server
-        //see if users exist in usersArray before pushing to friendsArray 
+
+
         $("#submitButton").on("click", function (event) {
             event.preventDefault();
 
             var newUser = {
-                userName: $("#userName").val().trim(),
-                imageLink: $("#imageLink").val().trim(),
-                answers: []
+                name: $("#userName").val().trim(),
+                photo: $("#imageLink").val().trim(),
+                scores: []
             }
 
             $(".answer").each(function (data) {
 
                 //pushes the users choices into the array
-                newUser.answers.push($(this).val().trim());
+                newUser.scores.push($(this).val().trim());
             });
 
-            usersArray.push(newUser);
-
-            console.log(`UsersArray: ${usersArray}`)
 
 
-            $.post("/api/friends", newUser)
-            $.get("/api/friends", function (req, res) {
-                console.log(`API get: ${req.body}`)
+
+
+
+            $.post("/api/friends", newUser).then(function (result) {
+                console.log(result)
+                var matchName = $("<h2>").
+                    addClass("matchName").
+                    attr("style", "text-align:center;").
+                    text(`${result.name}`);
+                var matchImage = $("<img>").
+                    addClass("img-thumbnail").
+                    attr("style", "align-content:center;").
+                    attr("src", `${result.link}`);
+
+
+                $(".modal-body").append(matchName, matchImage);
+                $('#matchModal').modal('show')
             })
+
 
         })
 
